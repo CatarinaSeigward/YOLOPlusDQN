@@ -1,0 +1,21 @@
+# Deep Learning Frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer Vision & Object Detection
+opencv-python>=4.5.0
+ultralytics>=8.0.0
+
+# Numerical Computing
+numpy>=1.21.0
+
+# Windows-specific (for screen capture and keyboard control)
+pywin32>=300
+keyboard>=0.13.5
+
+# Visualization
+matplotlib>=3.3.0
+
+# Optional: Development Tools
+jupyter>=1.0.0
+ipython>=8.0.0

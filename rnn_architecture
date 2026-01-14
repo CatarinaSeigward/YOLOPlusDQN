@@ -1,0 +1,34 @@
+// RNN Architecture
+digraph {
+	rankdir=TB
+	x1 [label="x_1
+(batch_size, 300)"]
+	x2 [label="x_2
+(batch_size, 300)"]
+	xT [label="x_T
+(batch_size, 300)"]
+	h11 [label="h1_1
+(128)"]
+	h12 [label="h1_2
+(128)"]
+	h1T [label="h1_T
+(128)"]
+	h21 [label="h2_1
+(128)"]
+	h22 [label="h2_2
+(128)"]
+	h2T [label="h2_T
+(128)"]
+	out [label=Output]
+	x1 -> h11
+	x2 -> h12
+	xT -> h1T
+	h11 -> h12
+	h12 -> h1T
+	h11 -> h21
+	h12 -> h22
+	h1T -> h2T
+	h21 -> h22
+	h22 -> h2T
+	h2T -> out
+}
