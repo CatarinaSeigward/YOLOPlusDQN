@@ -1,13 +1,8 @@
 # Deep Reinforcement Learning for Automated Boss Battle Gaming
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)](https://pytorch.org/)
-[![YOLO](https://img.shields.io/badge/YOLOv8-Ultralytics-green)](https://github.com/ultralytics/ultralytics)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 A hybrid YOLO-DQN approach for automated boss battle gameplay in action games, demonstrated on Black Myth: Wukong's Wandering Wight boss.
 
-## 📖 Overview
+## Overview
 
 This project combines real-time action recognition using YOLOv8 with Deep Q-Network (DQN) reinforcement learning to create an AI agent capable of learning and defeating bosses in action games. The system processes visual game data to recognize boss attack patterns and makes strategic combat decisions in real-time.
 
@@ -19,7 +14,7 @@ This project combines real-time action recognition using YOLOv8 with Deep Q-Netw
 - **Efficient Learning**: Successfully defeats boss within 60 training episodes
 - **Modular Architecture**: Easily extensible for different games and bosses
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Game Screen Capture
@@ -33,14 +28,12 @@ Game Screen Capture
                     └──► Reward Calculation ◄────────┘
 ```
 
-## 📋 Requirements
+##  Requirements
 
 ### System Requirements
-- **Operating System**: Windows 10/11 (required for DirectX screen capture and keyboard input simulation)
 - **GPU**: NVIDIA GPU with CUDA support (highly recommended for real-time inference)
   - Minimum 4GB VRAM for YOLOv8 inference
   - 6GB+ VRAM recommended for training
-- **Python**: Python 3.8 or higher (3.8, 3.9, 3.10, 3.11 supported)
 - **Game**: Black Myth: Wukong (or any target game with lock-on combat system)
 - **RAM**: 8GB minimum, 16GB+ recommended
 
@@ -66,11 +59,6 @@ Game Screen Capture
 ## 🚀 Installation
 
 ### Step 1: Clone the Repository
-```bash
-git clone https://github.com/yourusername/YOLOPlusDQN.git
-cd YOLOPlusDQN
-```
-
 ### Step 2: Set Up Python Environment
 
 #### Option A: Using Virtual Environment (Recommended)
@@ -174,7 +162,7 @@ pip uninstall opencv-python opencv-python-headless
 pip install opencv-python
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 dqn-boss-battle/
@@ -196,7 +184,7 @@ dqn-boss-battle/
 └── README.md
 ```
 
-## 🎮 Usage
+##  Usage
 
 ### Training the Agent
 
@@ -269,7 +257,7 @@ self.resize_height = 384                 # Resized height for processing
 - **Success Rate**: Consistently defeats boss after training
 - **Processing Speed**: ~10 FPS (limited by game interaction)
 
-## 🎯 Boss Action Recognition
+## Boss Action Recognition
 
 The YOLOv8 model is trained to detect the following boss actions:
 
@@ -283,7 +271,7 @@ The YOLOv8 model is trained to detect the following boss actions:
 8. Downed State
 9. Standing Position
 
-## 🔬 Technical Details
+## Technical Details
 
 ### State Representation
 - **Action Class**: Detected boss action (0-8, 99 for no action)
@@ -300,48 +288,35 @@ if player_blood_change > 0:
     reward -= player_blood_change * 5  # Penalty for taking damage
 ```
 
-## 🚧 Known Limitations
+## Known Limitations
 
 - Requires pre-trained YOLO model for each boss
 - Windows-only due to DirectX screen capture
 - Limited to games with lock-on targeting systems
 - Training data scalability challenges
 
-## 🔮 Future Work
+## Future Work
 
 - Integration with Grounding DINO for zero-shot boss detection
 - Multi-boss generalization capabilities
 - Cross-platform support
 - Real-time strategy adaptation
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## 📝 Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{lin2024deep,
-  title={Deep Reinforcement Learning for Automated Boss Battle Gaming: A YOLO-DQN Hybrid Approach},
-  author={Lin, Kaiwen},
-  year={2024},
-  institution={University of Texas at Austin}
-}
-```
-
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **analoganddigital** - For the DQN_play_sekiro project inspiration
 - **FAN XU** - For the pre-trained YOLOv8 model for Black Myth: Wukong
 - **Ultralytics** - For the YOLOv8 framework
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This project is for educational and research purposes only. Please respect the game developers' terms of service and use responsibly.
 
