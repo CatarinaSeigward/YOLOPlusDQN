@@ -40,23 +40,12 @@ Game Screen Capture
 ### Technology Stack
 
 #### Core Frameworks
-- **PyTorch** (>=2.0.0): Deep learning framework for DQN implementation
-- **Ultralytics YOLOv8** (>=8.0.0): Real-time object detection for boss action recognition
-- **OpenCV** (>=4.5.0): Computer vision library for image processing and screen capture
-
-#### Windows Integration
+- **PyTorch** : Deep learning framework for DQN implementation
+- **Ultralytics YOLOv8** : Real-time object detection for boss action recognition
+- **OpenCV** : Computer vision library for image processing and screen capture
 - **PyWin32** (>=300): Windows API access for screen capture (win32gui, win32ui, win32con)
-- **Keyboard** (>=0.13.5): Keyboard input simulation and event monitoring
 
-#### Data Processing & Visualization
-- **NumPy** (>=1.21.0): Numerical computing and array operations
-- **Matplotlib** (>=3.3.0): Training visualization and loss curve plotting
-
-#### Optional Development Tools
-- **Jupyter** (>=1.0.0): Interactive development and experimentation
-- **IPython** (>=8.0.0): Enhanced Python shell for debugging
-
-## 🚀 Installation
+##  Installation
 
 ### Step 1: Clone the Repository
 ### Step 2: Set Up Python Environment
@@ -97,6 +86,7 @@ pip install torch torchvision
 ```
 
 **Verify CUDA Installation:**
+
 ```python
 python -c "import torch; print(f'CUDA Available: {torch.cuda.is_available()}'); print(f'CUDA Version: {torch.version.cuda}')"
 ```
@@ -219,7 +209,7 @@ python Loss_Visualization.py
 
 This will generate a loss curve visualization showing the agent's learning progress.
 
-## 🔧 Configuration
+## Configuration
 
 ### DQN Parameters (in `dqn_agent.py`)
 
@@ -250,7 +240,7 @@ self.resize_width = 640                  # Resized width for processing
 self.resize_height = 384                 # Resized height for processing
 ```
 
-## 📊 Performance
+## Performance
 
 - **Training Episodes to Victory**: ~60 episodes
 - **Average Episode Length**: 200-300 steps
